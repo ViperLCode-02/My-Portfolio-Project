@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkMode</title>
+    <link rel="stylesheet" href="Sytyle.css">
+</head>
+<body>
+    <h1>Rodz Gerald Cachero</h1>
+    <p id="output">kapa kaayo ni kay mag dark mode mwheeheheh</p>
+
+    <button onclick="toggleDarkMode()">Diri ta Dark Mode</button>
+    <script>
+        function toggleDarkMode(){
+            document.body.classList.toggle("dark-mode")
+            let textElement = document.getElementById("output");
+            if(textElement.innerHTML === "kapa kaayo ni kay mag dark mode mwheeheheh"){
+                textElement.innerHTML = "ni bago na bleeee"
+            }
+            else{
+                textElement.innerHTML = "kapa kaayo ni kay mag dark mode mwheeheheh";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+@import url('style.css');
+
+/* Resume Section */
+#resume {
+  padding: 60px 10%;
+  background-color: #ffffff;
+  color: #1e1e1e;
+  text-align: center;
+  transition: background-color 0.4s, color 0.4s;
+}
+.resume-container {
+  max-width: 900px;
+  margin: auto;
+}
+.profile img {
+  width: 160px;
+  height: 160px;
+  border-radius: 10%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.profile h1 {
+  color: #0B6285;
+  font-size: 1.8rem;
+}
+.career-objective {
+  margin: 15px auto 40px;
+  font-size: 1rem;
+  width: 80%;
+  color: #444;
+  font-style: italic;
+}
+.info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.info-box {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: left;
+}
+.info-box h2 {
+  color: #0B6285;
+  margin-bottom: 10px;
+}
+.info-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+.info-box li {
+  margin-bottom: 6px;
+  color: #333;
+}
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+}
+.skills li {
+  background: #4e5b5a;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+.skills li:hover {
+  background: #66FCF1;
+  color: #0B0C10;
+}
+/* 🌙 Dark Mode */
+body.dark-mode #resume {
+  background-color: #0B0C10;
+  color: #C5C6C7;
+}
+body.dark-mode #resume h1 {
+ color: #66FCF1;
+}
+body.dark-mode .career-objective{
+  color: #C5C6C7;
+}
+body.dark-mode .info-box {
+  background: #1F2833;
+  box-shadow: 0 0 10px rgba(102, 252, 241, 0.2);
+}
+body.dark-mode .info-box li{
+  color: #C5C6C7;
+}
+body.dark-mode .info-box h2 {
+  color: #66FCF1;
+}
+body.dark-mode .skills li {
+  background: #66FCF1;
+  color: #0B0C10;
+}
+body.dark-mode .skills li:hover {
+  background: #45A29E;
+  color: #ffffff;
+}

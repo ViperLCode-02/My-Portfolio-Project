@@ -1,0 +1,167 @@
+@import url('style.css');
+
+/* ============ PROJECT SECTION ============ */
+#mySection {
+  padding: 60px 10%;
+  background-color: #ffffff;
+  color: #1e1e1e;
+  transition: background-color 0.4s, color 0.4s;
+  text-align: center;
+}
+
+.myInfo h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #1F2833;
+}
+
+.myInfo p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* ============ PROJECT GRID ============ */
+#project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;       
+  justify-content: space-between;
+  min-height: 400px;             
+}
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+.project-card:hover img {
+  transform: scale(1.05);
+}
+.project-info {
+  flex-grow: 1; 
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project-info h3 {
+  color: #0B6285;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+.project-info p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+.view {
+  align-self: center;
+  margin-top: auto;
+  margin-bottom: 15px;
+  width: 100px;
+  height: 35px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  background-color: #45A29E;
+  font-weight: 530;
+  transition: 0.3s ease;
+}
+.view:hover {
+  background-color: #66FCF1;
+}
+.project-info a {
+  text-decoration: none;
+}
+/* ============ DARK MODE COMPATIBILITY ============ */
+body.dark-mode .myInfo h1 {
+  color: #66FCF1;
+}
+body.dark-mode #mySection {
+  background-color: #0B0C10;
+  color: #C5C6C7;
+}
+body.dark-mode #project-grid {
+  background-color: transparent;
+}
+body.dark-mode .project-card {
+  background-color: #1F2833;
+  transition: 0.3s ease;
+}
+body.dark-mode .project-card:hover {
+  box-shadow: 0 0 10px #66FCF1;
+}
+body.dark-mode .project-info h3 {
+  color: #66FCF1;
+}
+body.dark-mode .project-info p {
+  color: #C5C6C7;
+}
+body.dark-mode .view{
+  background-color: #66FCF1;
+  transition: 0.3s ease;
+}
+body.dark-mode .view:hover{
+  background-color: #45A29E;
+}
+/* ============ IMAGE MODAL (FINAL FIXED VERSION) ============ */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+.modal.open {
+  display: flex;
+}
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+  transition: opacity 0.3s ease;
+}
+.close {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  color: white;
+  font-size: 38px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.2s;
+  z-index: 10000;
+}
+.close:hover {
+  color: #66FCF1;
+  transform: scale(1.2);
+}
+.modal.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}

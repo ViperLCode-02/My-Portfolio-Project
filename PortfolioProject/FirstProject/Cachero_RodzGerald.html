@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cachero_RodzGerald</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+      <nav class="navbar">
+        <a href="#" class="Logo"> Portfolio.</a>
+    </nav>
+      <header>
+      <img src="me.jpg" alt="Profile Picture" class="profile-pic" id="profileImg">
+
+<!-- The modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="fullImg">
+</div>
+<script>
+ var modal = document.getElementById("myModal");
+  var img = document.getElementById("profileImg");
+  var modalImg = document.getElementById("fullImg");
+  var closeBtn = document.getElementsByClassName("close")[0];
+
+  img.onclick = function() {
+    modal.style.display = "flex"; // use flex to center
+    modalImg.src = this.src;
+  }
+
+  closeBtn.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  modal.onclick = function(e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+        <h1>Rodz Gerald Cachero</h1>
+        <p>BS Information Technology - 3A</p>
+    </header>
+
+    <div class="container">
+        <h2>About Me</h2>
+        <p>
+            I am Rodz Gerald Cachero living in Poblacion, Malalag Davao del Sur, 20 years old, born on February 5, 2005. 
+            I graduated from elementary school at Malalag Central Elementary School and then high school at Davao del Sur School of Fisheries. 
+            My interests in life are playing gelblaster with my friends and participating in tournaments, I also like to watch movies and sleep.
+        </p>
+
+        <h2>Goal After Graduation</h2>
+        <p>
+            My goal in life is to become a software engineer abroad to have a good life and help my family, but if I can't continue, 
+            I also want to teach so I can share what I've learned with the next generation.
+        </p>
+
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill-card">
+    <img src="html.png" alt="HTML Logo" class="skill-icon">
+    <p>HTML</p>
+</div>
+
+<div class="skill-card">
+    <img src="css.png" alt="CSS Logo" class="skill-icon">
+    <p>CSS</p>
+</div>
+
+<div class="skill-card">
+    <img src="java.png" alt="Java Logo" class="skill-icon">
+    <p>Java</p>
+</div>
+
+<div class="skill-card">
+    <img src="Csharp_Logo.png" alt="C# Logo" class="skill-icon">
+    <p>C#</p>
+</div>
+
+<div class="skill-card">
+    <img src="database.png" alt="MySQL Logo" class="skill-icon">
+    <p>Database Management</p>
+</div>
+        </div>
+
+        <h2>Favorite Quote</h2>
+        <div class="quote">
+            "The best way to predict the future is to create it."
+        </div>
+
+        <h2>Contact Me</h2>
+        <div class="contacts">
+            <a href="https://web.facebook.com/rodzgerald.cachero.5" class="contact-link" target="_blank">Facebook</a>
+            <a href="mailto:rcachero.130983100058@gmail.com" class="contact-link">Email</a>
+        </div>
+    </div>
+
+</body>
+
+
+</html>
